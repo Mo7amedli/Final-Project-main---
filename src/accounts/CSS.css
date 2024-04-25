@@ -1,0 +1,110 @@
+/* Account */
+.setting{
+    display: flex;
+    margin: 20px 20px 0 50px;
+    flex-wrap: wrap;
+    gap: 170px;
+}
+.setting .but-setting{
+    height: 0;
+}
+.setting button{
+    display: block;
+    border: none;
+    background-color: transparent;
+    margin-left: 20px;
+    padding: 5px;
+}
+.account-content{
+    width: 650px;
+    padding-top: 8px;
+}
+
+/* Confirm Password */
+.security-pass{
+    margin: 33px 20px 0 20px;
+    background-color: transparent;
+    padding: 20px 20px 50px 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.security-pass .change-pass{
+    padding: 20px 0 0 0 ;
+    position: relative;
+}
+.security-pass .eidt-pass{
+    position: absolute;
+    right: 0;
+    top: 25px;
+    color: darkgreen;
+    border-radius: 50%;
+}
+.security-pass .check-pass{
+    position: absolute;
+    top: 68px;
+}
+.security-pass .check-info{
+    position: absolute;
+    left: 30px;
+}
+
+/* Information */
+.Account{
+    display: flex;
+    gap: 100px;
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.Account img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.Account h4{
+    padding: 0 0 25px 25px;
+}
+.Account label{
+    font-size: 14px;
+    font-weight: 400;
+}
+.Account p{
+    font-weight: 600;
+}
+.Acc-info{
+    margin-top: 30px;
+}
+/* Freelancer Profile */
+.account{
+    margin: 50px 150px 0 150px;
+    padding: 20px 0 50px 0;
+}
+.account-info{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Skills span{
+    background-color: #EEEEEE;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn-edit{
+    position: absolute;
+    right:18px;
+    bottom: 15px;
+    color: #097015;
+    font-size: 25px;
+}
+.linkedin{
+    text-decoration: none;
+    padding: 0 0 0 25px;
+}

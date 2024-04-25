@@ -1,0 +1,89 @@
+
+.freelancers-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.freelancer {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.freelancer-info {
+  flex: 1;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hourly-rate {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.full-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.description {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.hire-button, .favorite-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.hire-button {
+  background-color: #007bff;
+}
+
+.favorite-button {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.hire-button:hover {
+  background-color: #0056b3;
+}
+.favorite-button:hover{
+  background-color: #6f2028;
+}
+
+.briefcase-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
