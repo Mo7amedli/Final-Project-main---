@@ -1,23 +1,42 @@
+/* App.css */
+
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #a56bbe; /* Light gray background */
+  background-image: url('https://source.unsplash.com/random'); /* Background image */
+  background-size: cover;
+  background-position: center;
+}
 
 .freelancers-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto; /* Add margin to center the container */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .heading {
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 30px;
+  color: #333; /* Dark text color */
 }
 
 .freelancer {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  background-color: #fff;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #fff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 .profile-picture {
@@ -25,65 +44,79 @@
   height: 100px;
   border-radius: 50%;
   margin-right: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1); /* Scale up on hover */
 }
 
 .freelancer-info {
-  flex: 1;
+  flex-grow: 1;
 }
 
-.title {
-  font-size: 20px;
+.title-container {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
-  color: #333;
-}
-
-.hourly-rate {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #666;
-}
-
-.full-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.description {
-  font-size: 16px;
-  color: #888;
-  margin-bottom: 20px;
-}
-
-.hire-button, .favorite-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  transition: background-color 0.3s;
-}
-
-.hire-button {
-  background-color: #007bff;
-}
-
-.favorite-button {
-  background-color: #dc3545;
-  margin-left: 10px;
-}
-
-.hire-button:hover {
-  background-color: #0056b3;
-}
-.favorite-button:hover{
-  background-color: #6f2028;
 }
 
 .briefcase-icon {
-  font-size: 20px;
-  margin-right: 5px;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #ff7f50; /* Coral color */
+}
+
+.title {
+  font-size: 24px;
+  color: #333; /* Dark text color */
+}
+
+.hourly-rate {
+  margin-bottom: 5px;
+  color: #666; /* Dark gray color */
+}
+
+.full-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #222; /* Slightly darker text color */
+}
+
+.description {
+  color: #555; /* Lighter gray color */
+  margin-bottom: 15px;
+}
+
+.hire-button,
+.favorite-button {
+  background-color: #5f4bcc; /* Purple button color */
+  color: #fff; /* White text color */
+  border: none;
+  margin: 3px;
+  border-radius: 5px;
+  padding: 10px ;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hire-button:hover,
+.favorite-button:hover {
+  background-color: #472fb0; 
+  transform: scale(1.1);/* Darker purple on hover */
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

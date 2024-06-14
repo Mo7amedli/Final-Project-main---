@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '.JobPost/.css'; // Import CSS file
+import './JobPost.css'; // Import CSS file
 
 const JobPostsPage = () => {
   const [jobPosts, setJobPosts] = useState([

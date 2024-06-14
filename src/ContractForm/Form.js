@@ -1,108 +1,38 @@
 import React, { useState } from 'react';
-import './App.css'; // Import CSS file
+import '.JobPost/.css'; // Import CSS file
 
-const Form = () => {
-  const [formData, setFormData] = useState({
-    termsAndConditions: false,
-    price: '',
-    startDate: '',
-    endDate: '',
-    paymentWay: '',
-    jobPostId: '',
-    clientId: '',
-    freelancerId: '',
-    paymentMethodId: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+const JobPostPage = () => {
+  const [isFavorited, setIsFavorited] = useState(false);
+  const jobPost = {
+    title: 'Frontend Developer Needed',
+    description: 'We are looking for a frontend developer to join our team.',
+    price: '$3000',
+    duration: '30',
+    category: 'Web Development',
+    skills: 'HTML, CSS, JavaScript'
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    // You can perform further actions here like sending the form data to the server
+  const handleFavoriteClick = () => {
+    setIsFavorited(prevState => !prevState);
   };
 
   return (
-    <div className="form-container">
-      <h2>Create Contract</h2>
-      <form onSubmit={handleSubmit}>
-        
-        <div className="form-group">
-          <label>Price:</label>
-          <input
-            type="text"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Start Date:</label>
-          <input
-            type="date"
-            name="startDate"
-            value={formData.startDate}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>End Date:</label>
-          <input
-            type="date"
-            name="endDate"
-            value={formData.endDate}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Payment Way:</label>
-          <input
-            type="text"
-            name="paymentWay"
-            value={formData.paymentWay}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Terms and Conditions</label>
-            <textarea
-              
-              name="termsAndConditions"
-              checked={formData.termsAndConditions}
-              onChange={handleChange}
-            />
-            
-        
-        </div>
-        <div className="form-group">
-          <label>ProjectDetails:</label>
-          <input
-            type="text"
-            name="parojectdetails"
-            value={formData.projectdetails}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Signature:</label>
-          <input
-            type="text"
-            name="signature"
-            value={formData.signature}
-            onChange={handleChange}
-          />
-        </div>
-      
-        <button type="submit" className='form-button'>Submit</button>
-      </form>
+    <div className="job-post-container">
+      <h2 className="job-post-title">{jobPost.title}</h2>
+      <p className="job-post-detail"><span className="job-post-label">Description:</span> {jobPost.description}</p>
+      <p className="job-post-detail"><span className="job-post-label">Price:</span> {jobPost.price}</p>
+      <p className="job-post-detail"><span className="job-post-label">Duration:</span> {jobPost.duration} days</p>
+      <p className="job-post-detail"><span className="job-post-label">Category:</span> {jobPost.category}</p>
+      <p className="job-post-detail"><span className="job-post-label">Skills:</span> <span className="job-post-skills">{jobPost.skills}</span></p>
+
+      <div className="job-post-buttons">
+        <button className="hire-button">Hire</button>
+        <button className="heart-button" onClick={handleFavoriteClick}>
+          {isFavorited ? 'Is Favorited' : '\u2661 Favorite'}
+        </button>
+      </div>
     </div>
   );
 };
 
-export default Form;
+export default JobPostPage;

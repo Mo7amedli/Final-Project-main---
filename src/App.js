@@ -18,7 +18,8 @@ import Error403 from './errorPages/Error403';
 import ProfileFree from './accounts/ProfileFreelancer.js/ProfileFree';
 import Error401 from './errorPages/Error401';
 import Error500 from './errorPages/Error500';
-import Jobposts from './Jobposts/JobPostPage.js';
+import Jobposts from './JobPost/JobPostPage.js';
+import JobPostPage from './JobPost/JobPostPage.js';
 
 function App() {
   return (
